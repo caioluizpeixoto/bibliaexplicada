@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract background with golden light and textures, evoking a spiritual or ancient feel.",
+      "imageUrl": "https://images.unsplash.com/photo-1760258919780-8d51e5f53c3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxzY3JvbGwlMjB2aW50YWdlfGVufDB8fHx8MTc2NDk5MjU3MXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "scroll vintage"
+    },
+    {
+      "id": "content-preview",
+      "description": "A tablet screen displaying a bible study application interface.",
+      "imageUrl": "https://images.unsplash.com/photo-1554122183-3d78f02b451c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8dGFibGV0JTIwYmlibGV8ZW58MHx8fHwxNzY0OTkyNTcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "tablet bible"
+    },
+    {
+      "id": "testimonial-1",
+      "description": "Portrait of a smiling person for a testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1540569014015-19a7be504e3a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ5MjI1MDh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person portrait"
+    },
+    {
+      "id": "testimonial-2",
+      "description": "Portrait of another person for a testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1563178406-4cdc2923acbc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d29tYW4lMjBzbWlsaW5nfGVufDB8fHx8MTc2NDkzODI3N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "woman smiling"
+    },
+    {
+      "id": "testimonial-3",
+      "description": "Portrait of a third person for a testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1522556189639-b150ed9c4330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ5NzY5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "man portrait"
+    }
+  ]
 }
