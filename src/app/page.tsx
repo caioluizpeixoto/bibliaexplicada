@@ -151,30 +151,6 @@ export default function SalesPage() {
 
         <FacebookTestimonialsSection />
 
-        {/* Guarantee Section */}
-        <section id="garantia" className="py-20 px-4">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Garantia Incondicional de 7 Dias</h2>
-              <p className="mt-4 text-lg text-foreground/80">
-                Sua satisfação é nossa prioridade. Por isso, oferecemos uma garantia de 7 dias. Se, por qualquer motivo, você não ficar 100% satisfeito com o material, basta nos enviar um e-mail e devolveremos todo o seu investimento, sem perguntas.
-              </p>
-              <p className="mt-4 text-lg text-foreground/80 font-semibold">
-                O risco é todo nosso. Você não tem nada a perder!
-              </p>
-            </div>
-            <div className="order-1 md:order-2 flex justify-center">
-              <img
-                src="https://i.ibb.co/b5FhVcS3/image-1764648511770-DJnmu-Pz7.png"
-                alt="Selo de Garantia de 7 dias"
-                width="350"
-                height="350"
-                className="max-w-xs"
-              />
-            </div>
-          </div>
-        </section>
-
         {/* Trust Section */}
         <section className="py-20 px-4 bg-card">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Sua jornada de fé com total confiança</h2>
@@ -233,6 +209,30 @@ export default function SalesPage() {
                 ))}
               </Accordion>
             </div>
+        </section>
+
+        {/* Guarantee Section */}
+        <section id="garantia" className="py-20 px-4">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Garantia Incondicional de 7 Dias</h2>
+              <p className="mt-4 text-lg text-foreground/80">
+                Sua satisfação é nossa prioridade. Por isso, oferecemos uma garantia de 7 dias. Se, por qualquer motivo, você não ficar 100% satisfeito com o material, basta nos enviar um e-mail e devolveremos todo o seu investimento, sem perguntas.
+              </p>
+              <p className="mt-4 text-lg text-foreground/80 font-semibold">
+                O risco é todo nosso. Você não tem nada a perder!
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <img
+                src="https://i.ibb.co/b5FhVcS3/image-1764648511770-DJnmu-Pz7.png"
+                alt="Selo de Garantia de 7 dias"
+                width="350"
+                height="350"
+                className="max-w-xs"
+              />
+            </div>
+          </div>
         </section>
       </main>
 
