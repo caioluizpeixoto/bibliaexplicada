@@ -81,7 +81,7 @@ export default function SalesPage() {
             <div className="mt-8 w-full max-w-md mx-auto">
                 {mockupImage && (
                     <img
-                        src="https://i.ibb.co/jP6TQ6yQ/1000357127.png"
+                        src="https://i.ibb.co/PvmNPmcP/1000357127.png"
                         alt={mockupImage.description}
                         width="600"
                         height="600"
