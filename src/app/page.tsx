@@ -214,7 +214,7 @@ export default function SalesPage() {
         {/* Guarantee Section */}
         <section id="garantia" className="py-20 px-4">
           <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
+            <div className="order-2 md:order-1 md:text-center">
               <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Garantia Incondicional de 7 Dias</h2>
               <p className="mt-4 text-lg text-foreground/80">
                 Sua satisfação é nossa prioridade. Por isso, oferecemos uma garantia de 7 dias. Se, por qualquer motivo, você não ficar 100% satisfeito com o material, basta nos enviar um e-mail e devolveremos todo o seu investimento, sem perguntas.
