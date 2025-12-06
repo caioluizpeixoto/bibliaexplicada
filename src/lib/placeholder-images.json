@@ -1,0 +1,40 @@
+{
+  "placeholderImages": [
+    {
+      "id": "product-mockup",
+      "description": "Mockup de capas de livros ou de um produto digital em uma caixa, representando a coleção 'Bíblia Comentada'.",
+      "imageUrl": "https://i.ibb.co/PvmNPmc/1000357127.png",
+      "imageHint": "book mockup"
+    },
+    {
+      "id": "content-preview-2",
+      "description": "Preview do conteúdo interno do material de estudo, mostrando gráficos, textos e layout.",
+      "imageUrl": "https://i.postimg.cc/zG8mFNWS/Gemini-Generated-Image-ej4h5ej4h5ej4h5e.png",
+      "imageHint": "bible study"
+    },
+    {
+      "id": "testimonial-fb-1",
+      "description": "Avatar de Sarah Lima",
+      "imageUrl": "https://i.postimg.cc/Rhc8wJbK/Captura-de-tela-2025-10-01-201147.png",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-fb-2",
+      "description": "Avatar de Marcos Borges",
+      "imageUrl": "https://i.postimg.cc/Y01VQLyg/Captura-de-tela-2025-11-20-152142.png",
+      "imageHint": "man portrait"
+    },
+    {
+      "id": "testimonial-fb-3",
+      "description": "Avatar de Juliana Costa",
+      "imageUrl": "https://i.postimg.cc/4yzMpHF7/Captura-de-tela-2025-10-01-201033.png",
+      "imageHint": "woman portrait"
+    },
+    {
+      "id": "testimonial-fb-4",
+      "description": "Avatar de Rafael Mendes",
+      "imageUrl": "https://i.ibb.co/pTbLx1F/Captura-de-tela-2025-11-20-152258.png",
+      "imageHint": "man portrait"
+    }
+  ]
+}
