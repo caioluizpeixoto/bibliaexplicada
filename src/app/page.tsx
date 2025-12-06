@@ -80,14 +80,12 @@ export default function SalesPage() {
             </p>
             <div className="mt-8 w-full max-w-md mx-auto">
                 {mockupImage && (
-                    <Image
+                    <img
                         src="https://i.ibb.co/jP6TQ6yQ/1000357127.png"
                         alt={mockupImage.description}
-                        width={600}
-                        height={600}
-                        quality={95}
+                        width="600"
+                        height="600"
                         className="rounded-lg shadow-2xl shadow-primary/10"
-                        priority
                         data-ai-hint={mockupImage.imageHint}
                     />
                 )}
