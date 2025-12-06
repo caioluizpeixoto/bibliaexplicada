@@ -199,7 +199,7 @@ export default function SalesPage() {
                       <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
                   </div>
               </div>
-               <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+               <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
                   <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">DESTRAVAR MEU APRENDIZADO</Link>
               </Button>
               <p className="text-xs text-foreground/60 mt-4">
