@@ -207,7 +207,7 @@ export default function SalesPage() {
             </div>
             <div className="order-1 md:order-2 flex justify-center">
               <img
-                src="https://i.ibb.co/b5FhVcS/image-1764648511770-DJnmu-Pz7.png"
+                src="https://i.postimg.cc/wxwspxxL/Selo-garantia-7dias-curso-1024x1024.png"
                 alt="Selo de Garantia de 7 dias"
                 width="350"
                 height="350"
@@ -250,5 +250,3 @@ export default function SalesPage() {
     </div>
   );
 }
-
-    
