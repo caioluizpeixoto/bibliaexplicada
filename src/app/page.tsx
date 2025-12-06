@@ -66,9 +66,6 @@ export default function SalesPage() {
       <main className="flex-1">
         {/* Hero Section */}
         <section id="inicio" className="text-center py-16 px-4 flex flex-col items-center">
-            <div className="bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mb-4 border border-primary/30">
-                Material de Estudo Bíblico
-            </div>
             <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
               Gênesis a Apocalipse,{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
