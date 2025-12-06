@@ -51,8 +51,13 @@ export default function SalesPage() {
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
       {/* Urgency Banner */}
-      <div className="bg-primary text-primary-foreground text-center p-2 text-sm font-bold">
-        Acesso promocional por tempo limitado
+      <div className="bg-primary text-primary-foreground text-center p-2 text-sm font-bold overflow-hidden">
+        <div className="animate-marquee whitespace-nowrap">
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
+        </div>
       </div>
 
       {/* Main Content */}
@@ -62,8 +67,13 @@ export default function SalesPage() {
             <div className="bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mb-4 border border-primary/30">
                 Material de Estudo Bíblico
             </div>
-            <h1 className="font-headline text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
-                Entenda a Bíblia de Gênesis a Apocalipse, Versículo por Versículo
+            <h1 className="font-body text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
+              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+                Entenda a Bíblia de
+              </span> Gênesis a Apocalipse,{' '}
+              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
+                Versículo por Versículo
+              </span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
                 O guia definitivo para você destravar seu aprendizado bíblico de forma simples e visual.
