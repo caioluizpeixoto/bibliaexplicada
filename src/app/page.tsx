@@ -91,9 +91,8 @@ export default function SalesPage() {
                 )}
             </div>
             <div className="mt-8 text-center">
-                <p className="text-foreground/80">De <span className="line-through">R$99,90</span> por apenas:</p>
-                <p className="text-5xl font-bold my-2 text-cta">12x de R$9,99</p>
-                <p className="text-foreground/80">ou R$99,99 à vista</p>
+                <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
+                <p className="text-5xl font-bold my-2 text-cta">R$9,99</p>
             </div>
             <Button asChild size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-16 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
                 <Link href="#oferta-final">QUERO DESTRAVAR MEU APRENDIZADO</Link>
@@ -190,9 +189,8 @@ export default function SalesPage() {
             <p className="font-semibold text-primary">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
             <h2 className="font-headline text-3xl md:text-5xl font-bold mt-4 max-w-3xl mx-auto">Destrave o seu entendimento da Bíblia hoje mesmo</h2>
             <div className="mt-8 text-center">
-                <p className="text-foreground/80">De <span className="line-through">R$99,90</span> por apenas:</p>
-                <p className="text-6xl font-bold my-2 text-cta">12x de R$9,99</p>
-                <p className="text-foreground/80">ou R$99,99 à vista</p>
+                <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
+                <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
             </div>
              <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-16 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
                 <Link href="#oferta-final">QUERO DESTRAVAR MEU APRENDIZADO</Link>
