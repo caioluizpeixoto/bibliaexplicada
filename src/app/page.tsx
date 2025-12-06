@@ -81,7 +81,7 @@ export default function SalesPage() {
             </p>
             <div className="mt-8 w-full max-w-md mx-auto">
                 <img
-                    src="https://i.ibb.co/PvmNPmc/1000357127.png"
+                    src="https://i.postimg.cc/RC24f2Xk/Gemini-Generated-Image-pjoqsvpjoqsvpjoq.png"
                     alt="Mockup do produto"
                     width="600"
                     height="600"
