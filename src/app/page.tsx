@@ -173,17 +173,17 @@ export default function SalesPage() {
             <p className="font-semibold text-primary">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
             <h2 className="font-headline text-3xl md:text-5xl font-bold mt-4 max-w-3xl mx-auto">Destrave o seu entendimento da Bíblia hoje mesmo</h2>
             <div className="mt-8 max-w-xl mx-auto bg-card p-8 rounded-2xl border border-primary/20">
-                <h3 className="font-headline text-2xl font-bold mb-6 text-primary">Ao garantir seu acesso, você recebe:</h3>
+                <h3 className="font-headline text-2xl font-bold text-primary">Ao garantir seu acesso, você recebe:</h3>
                 <ul className="mt-6 space-y-4 text-lg text-foreground/80 text-left">
                     <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais e comentados de todos os 66 livros da Bíblia.</span></li>
                     <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo para total clareza.</span></li>
                     <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais, resumos e devocionais para aprofundar seu conhecimento.</span></li>
                     <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações futuras sem custo adicional.</span></li>
                 </ul>
-            </div>
-            <div className="mt-8 text-center">
-                <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
-                <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
+                <div className="mt-8 text-center bg-background/50 rounded-lg p-6">
+                    <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
+                    <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
+                </div>
             </div>
              <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
                 <Link href="#oferta-final">DESTRAVAR MEU APRENDIZADO</Link>
