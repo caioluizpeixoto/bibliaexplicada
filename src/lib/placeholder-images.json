@@ -3,7 +3,7 @@
     {
       "id": "product-mockup",
       "description": "Mockup de capas de livros ou de um produto digital em uma caixa, representando a coleção 'Bíblia Comentada'.",
-      "imageUrl": "https://images.unsplash.com/photo-1519764340700-3db40311f21e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rJTIwbW9ja3VwfGVufDB8fHx8MTc2NDk2MzcwMnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/PvmNPmcP/1000357127.png",
       "imageHint": "book mockup"
     },
     {
@@ -15,25 +15,25 @@
     {
       "id": "testimonial-fb-1",
       "description": "Avatar de Sarah Lima",
-      "imageUrl": "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTAxNzM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/bgSV6DHJ/Captura-de-tela-2025-10-01-201033.png",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial-fb-2",
       "description": "Avatar de Marcos Borges",
-      "imageUrl": "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ5NzY5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/PZcSkW0D/Captura-de-tela-2025-10-01-201147.png",
       "imageHint": "man portrait"
     },
     {
       "id": "testimonial-fb-3",
       "description": "Avatar de Juliana Costa",
-      "imageUrl": "https://images.unsplash.com/photo-1592621385612-4d7129426394?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHx3b21hbiUyMHBvcnRyYWl0fGVufDB8fHx8MTc2NTAxNzM4OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/Fbb0h8Fq/Captura-de-tela-2025-11-20-152142.png",
       "imageHint": "woman portrait"
     },
     {
       "id": "testimonial-fb-4",
       "description": "Avatar de Rafael Mendes",
-      "imageUrl": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxtYW4lMjBwb3J0cmFpdHxlbnwwfHx8fDE3NjQ5NzY5OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://i.ibb.co/pTbLx1F/Captura-de-tela-2025-11-20-152258.png",
       "imageHint": "man portrait"
     }
   ]

@@ -81,7 +81,7 @@ export default function SalesPage() {
             </p>
             <div className="mt-8 w-full max-w-md mx-auto">
                 <img
-                    src="https://i.ibb.co/PvmNPmcP/1000357127.png"
+                    src="https://i.ibb.co/PvmNPmc/1000357127.png"
                     alt="Mockup do produto"
                     width="600"
                     height="600"
@@ -207,7 +207,7 @@ export default function SalesPage() {
             </div>
             <div className="order-1 md:order-2 flex justify-center">
               <img
-                src="https://i.ibb.co/b5FhVcS3/image-1764648511770-DJnmu-Pz7.png"
+                src="https://i.ibb.co/b5FhVcS/image-1764648511770-DJnmu-Pz7.png"
                 alt="Selo de Garantia de 7 dias"
                 width="350"
                 height="350"
