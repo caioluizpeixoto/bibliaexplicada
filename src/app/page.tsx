@@ -84,7 +84,8 @@ export default function SalesPage() {
                         src="https://i.ibb.co/jP6TQ6yQ/1000357127.png"
                         alt={mockupImage.description}
                         width={600}
-                        height={450}
+                        height={600}
+                        quality={95}
                         className="rounded-lg shadow-2xl shadow-primary/10"
                         priority
                         data-ai-hint={mockupImage.imageHint}
