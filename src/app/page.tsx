@@ -1,4 +1,6 @@
 
+'use client';
+
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
@@ -50,6 +52,15 @@ export default function SalesPage() {
   const mockupImage = PlaceHolderImages.find(p => p.id === 'product-mockup');
   const previewImage = PlaceHolderImages.find(p => p.id === 'content-preview-2');
 
+  const handleScrollToOffer = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.preventDefault();
+    const targetElement = document.getElementById('oferta-final');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
       {/* Urgency Banner */}
@@ -94,8 +105,8 @@ export default function SalesPage() {
                 <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
                 <p className="text-5xl font-bold my-2 text-cta">R$9,99</p>
             </div>
-            <Button asChild size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
-                <Link href="#oferta-final">DESTRAVAR MEU APRENDIZADO</Link>
+            <Button onClick={handleScrollToOffer} size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
+                DESTRAVAR MEU APRENDIZADO
             </Button>
             <p className="text-xs text-foreground/60 mt-4">
                 Compra segura • Acesso imediato • Suporte exclusivo
