@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ShieldCheck, Zap, BookLock, Star, Check } from 'lucide-react';
+import { ShieldCheck, Zap, BookLock, Check } from 'lucide-react';
 import { FacebookTestimonialsSection } from '@/components/landing/facebook-testimonials-section';
 
 const identificationItems = [
@@ -68,13 +68,13 @@ export default function SalesPage() {
         {/* Hero Section */}
         <section id="inicio" className="text-center py-16 px-4 flex flex-col items-center">
             <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
-              Gênesis a Apocalipse,{' '}
+              📖 Gênesis a Apocalipse,{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Entenda a Bíblia de
               </span>{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Versículo por Versículo
-              </span>
+              </span> 📖
             </h1>
             <p className="mt-4 text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
                 O guia definitivo para você destravar seu aprendizado bíblico de forma simples e visual.
@@ -116,7 +116,7 @@ export default function SalesPage() {
             <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
                 {identificationItems.map((item, index) => (
                     <div key={index} className="bg-card rounded-2xl p-6 border-l-4 border-primary flex items-center shadow-lg">
-                        <Star className="text-primary h-6 w-6 mr-4 flex-shrink-0" />
+                        <img src="https://i.postimg.cc/cJtcKgHh/biblia-(1).png" alt="biblia" className="h-6 w-6 mr-4 flex-shrink-0" />
                         <p className="text-foreground/90">{item.text}</p>
                     </div>
                 ))}
@@ -250,3 +250,5 @@ export default function SalesPage() {
     </div>
   );
 }
+
+    
