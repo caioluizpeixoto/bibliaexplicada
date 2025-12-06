@@ -68,13 +68,13 @@ export default function SalesPage() {
         {/* Hero Section */}
         <section id="inicio" className="text-center py-16 px-4 flex flex-col items-center">
             <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
-              📖 Gênesis a Apocalipse,{' '}
+              Gênesis a Apocalipse,{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Entenda a Bíblia de
               </span>{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Versículo por Versículo
-              </span> 📖
+              </span>
             </h1>
             <p className="mt-4 text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
                 O guia definitivo para você destravar seu aprendizado bíblico de forma simples e visual.
