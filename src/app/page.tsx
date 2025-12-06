@@ -151,8 +151,32 @@ export default function SalesPage() {
 
         <FacebookTestimonialsSection />
 
+        {/* Guarantee Section */}
+        <section id="garantia" className="py-20 px-4">
+          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="order-2 md:order-1">
+              <h2 className="font-headline text-3xl md:text-4xl font-bold text-primary">Garantia Incondicional de 7 Dias</h2>
+              <p className="mt-4 text-lg text-foreground/80">
+                Sua satisfação é nossa prioridade. Por isso, oferecemos uma garantia de 7 dias. Se, por qualquer motivo, você não ficar 100% satisfeito com o material, basta nos enviar um e-mail e devolveremos todo o seu investimento, sem perguntas.
+              </p>
+              <p className="mt-4 text-lg text-foreground/80 font-semibold">
+                O risco é todo nosso. Você não tem nada a perder!
+              </p>
+            </div>
+            <div className="order-1 md:order-2 flex justify-center">
+              <img
+                src="https://i.ibb.co/b5FhVcS3/image-1764648511770-DJnmu-Pz7.png"
+                alt="Selo de Garantia de 7 dias"
+                width="350"
+                height="350"
+                className="max-w-xs"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Trust Section */}
-        <section className="py-20 px-4">
+        <section className="py-20 px-4 bg-card">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Sua jornada de fé com total confiança</h2>
             <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-4xl mx-auto text-center">
                 {features.map((feature) => (
@@ -168,10 +192,10 @@ export default function SalesPage() {
         </section>
 
         {/* Final CTA */}
-        <section id="oferta-final" className="bg-card py-20 px-4 text-center">
+        <section id="oferta-final" className="bg-background py-20 px-4 text-center">
             <p className="font-semibold text-primary">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
             <h2 className="font-headline text-3xl md:text-5xl font-bold mt-4 max-w-3xl mx-auto">Destrave o seu entendimento da Bíblia hoje mesmo</h2>
-            <div className="mt-8 max-w-xl mx-auto bg-background/30 p-8 rounded-2xl border border-primary/20">
+            <div className="mt-8 max-w-xl mx-auto bg-card p-8 rounded-2xl border border-primary/20">
                 <h3 className="font-headline text-2xl font-bold mb-6 text-primary">Ao garantir seu acesso, você recebe:</h3>
                 <ul className="mt-6 space-y-4 text-lg text-foreground/80 text-left">
                     <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais e comentados de todos os 66 livros da Bíblia.</span></li>
@@ -193,12 +217,12 @@ export default function SalesPage() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-20 px-4">
+        <section id="faq" className="py-20 px-4 bg-card">
           <div className="max-w-3xl mx-auto">
               <h3 className="font-headline text-2xl md:text-3xl font-bold text-center mb-8">Perguntas Frequentes</h3>
               <Accordion type="single" collapsible className="w-full">
                 {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-xl mb-3 border-none shadow-sm">
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-background rounded-xl mb-3 border-none shadow-sm">
                     <AccordionTrigger className="text-left font-bold text-lg p-6 hover:no-underline text-foreground">
                       {faq.question}
                     </AccordionTrigger>
