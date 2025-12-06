@@ -8,6 +8,7 @@ import {
   AccordionTrigger,
 } from '@/components/ui/accordion';
 import { ShieldCheck, Zap, BookLock, Star, Check } from 'lucide-react';
+import { FacebookTestimonialsSection } from '@/components/landing/facebook-testimonials-section';
 
 const identificationItems = [
     { text: 'Deseja entender capítulos e versículos com profundidade, sem se sentir perdido.' },
@@ -151,6 +152,8 @@ export default function SalesPage() {
             </div>
         </section>
 
+        <FacebookTestimonialsSection />
+
         {/* Trust Section */}
         <section className="py-20 px-4">
             <h2 className="font-headline text-3xl md:text-4xl font-bold text-center">Sua jornada de fé com total confiança</h2>
@@ -191,7 +194,7 @@ export default function SalesPage() {
                 <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
                 <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
             </div>
-             <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-16 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+             <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
                 <Link href="#oferta-final">DESTRAVAR MEU APRENDIZADO</Link>
             </Button>
             <p className="text-xs text-foreground/60 mt-4">
