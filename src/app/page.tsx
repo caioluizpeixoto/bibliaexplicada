@@ -57,6 +57,8 @@ export default function SalesPage() {
           <span className="mx-4">Acesso promocional por tempo limitado</span>
           <span className="mx-4">Acesso promocional por tempo limitado</span>
           <span className="mx-4">Acesso promocional por tempo limitado</span>
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
+          <span className="mx-4">Acesso promocional por tempo limitado</span>
         </div>
       </div>
 
@@ -67,10 +69,11 @@ export default function SalesPage() {
             <div className="bg-primary/10 text-primary font-semibold py-1 px-3 rounded-full text-sm mb-4 border border-primary/30">
                 Material de Estudo Bíblico
             </div>
-            <h1 className="font-body text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
+            <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
+              Gênesis a Apocalipse,{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Entenda a Bíblia de
-              </span> Gênesis a Apocalipse,{' '}
+              </span>{' '}
               <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
                 Versículo por Versículo
               </span>
@@ -96,7 +99,7 @@ export default function SalesPage() {
                 <p className="text-5xl font-bold my-2 text-cta">12x de R$9,99</p>
                 <p className="text-foreground/80">ou R$99,99 à vista</p>
             </div>
-            <Button asChild size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-14 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+            <Button asChild size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-16 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
                 <Link href="#oferta-final">QUERO DESTRAVAR MEU APRENDIZADO</Link>
             </Button>
             <p className="text-xs text-foreground/60 mt-4">
