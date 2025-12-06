@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import Image from 'next/image';
 import { ThumbsUp, MessageCircle, Share2, MoreHorizontal } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -12,6 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const testimonials = [
   {
@@ -46,6 +48,9 @@ const testimonials = [
 
 export function FacebookTestimonialsSection() {
   const images = PlaceHolderImages;
+  const plugin = React.useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true, stopOnMouseEnter: true })
+  );
 
   return (
     <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background">
@@ -59,6 +64,7 @@ export function FacebookTestimonialsSection() {
           </p>
         </div>
         <Carousel
+          plugins={[plugin.current]}
           opts={{
             align: 'start',
             loop: true,
