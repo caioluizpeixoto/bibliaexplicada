@@ -24,18 +24,18 @@ const testimonials = [
     likes: 127,
   },
   {
-    id: 'testimonial-fb-2',
-    name: 'Marcos Borges',
-    time: '5d',
-    text: "Estou usando os resumos para preparar minhas aulas na escola dominical e o feedback dos alunos tem sido fantástico. O conteúdo é rico, confiável e muito didático. Valeu cada centavo!",
-    likes: 89,
-  },
-  {
     id: 'testimonial-fb-3',
     name: 'Juliana Costa',
     time: '4d',
     text: "Comprei sem muita expectativa, mas fui surpreendida. A abordagem visual com mapas mentais me ajudou a conectar as histórias e a reter muito mais informação. Um trabalho primoroso, que Deus abençoe vocês!",
     likes: 241,
+  },
+  {
+    id: 'testimonial-fb-2',
+    name: 'Marcos Borges',
+    time: '5d',
+    text: "Estou usando os resumos para preparar minhas aulas na escola dominical e o feedback dos alunos tem sido fantástico. O conteúdo é rico, confiável e muito didático. Valeu cada centavo!",
+    likes: 89,
   },
     {
     id: 'testimonial-fb-4',
