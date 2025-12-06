@@ -79,16 +79,13 @@ export default function SalesPage() {
                 O guia definitivo para você destravar seu aprendizado bíblico de forma simples e visual.
             </p>
             <div className="mt-8 w-full max-w-md mx-auto">
-                {mockupImage && (
-                    <img
-                        src="https://i.ibb.co/PvmNPmcP/1000357127.png"
-                        alt={mockupImage.description}
-                        width="600"
-                        height="600"
-                        className="rounded-lg shadow-2xl shadow-primary/10"
-                        data-ai-hint={mockupImage.imageHint}
-                    />
-                )}
+                <img
+                    src="https://i.ibb.co/PvmNPmcP/1000357127.png"
+                    alt="Mockup do produto"
+                    width="600"
+                    height="600"
+                    className="rounded-lg shadow-2xl shadow-primary/10"
+                />
             </div>
             <div className="mt-8 text-center">
                 <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
@@ -168,22 +165,6 @@ export default function SalesPage() {
                     </div>
                 ))}
             </div>
-
-            <div className="max-w-3xl mx-auto mt-20">
-              <h3 className="font-headline text-2xl md:text-3xl font-bold text-center mb-8">Perguntas Frequentes</h3>
-              <Accordion type="single" collapsible className="w-full">
-                {faqs.map((faq, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-xl mb-3 border-none shadow-sm">
-                    <AccordionTrigger className="text-left font-bold text-lg p-6 hover:no-underline text-foreground">
-                      {faq.question}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-base text-foreground/80 px-6">
-                      {faq.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
         </section>
 
         {/* Final CTA */}
@@ -202,6 +183,24 @@ export default function SalesPage() {
             </p>
         </section>
 
+        {/* FAQ Section */}
+        <section id="faq" className="py-20 px-4">
+          <div className="max-w-3xl mx-auto">
+              <h3 className="font-headline text-2xl md:text-3xl font-bold text-center mb-8">Perguntas Frequentes</h3>
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="bg-card rounded-xl mb-3 border-none shadow-sm">
+                    <AccordionTrigger className="text-left font-bold text-lg p-6 hover:no-underline text-foreground">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-base text-foreground/80 px-6">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+        </section>
       </main>
 
       {/* Footer */}
