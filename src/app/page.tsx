@@ -9,11 +9,19 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ShieldCheck, Zap, BookLock, Check, Star } from 'lucide-react';
+import { ShieldCheck, Zap, BookLock, Check, Star, X } from 'lucide-react';
 import { FacebookTestimonialsSection } from '@/components/landing/facebook-testimonials-section';
 import { AnimateOnScroll } from '@/components/landing/animate-on-scroll';
 import { useState } from 'react';
-import { OrderBumpDialog } from '@/components/landing/order-bump-dialog';
+import {
+  AlertDialog,
+  AlertDialogContent,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogDescription,
+  AlertDialogFooter,
+} from '@/components/ui/alert-dialog';
+
 
 const identificationItems = [
     { text: 'Deseja entender capítulos e versículos com profundidade, sem se sentir perdido.' },
@@ -62,6 +70,65 @@ const premiumBonuses = [
   'Evangelho de Mateus Explicado',
 ];
 
+function OrderBumpDialog({
+  isOpen,
+  onOpenChange,
+  premiumBonuses,
+  essentialCheckoutUrl,
+  premiumCheckoutUrl,
+}: {
+  isOpen: boolean;
+  onOpenChange: (open: boolean) => void;
+  premiumBonuses: string[];
+  essentialCheckoutUrl: string;
+  premiumCheckoutUrl: string;
+}) {
+  return (
+    <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
+      <AlertDialogContent className="bg-card border-secondary max-w-lg md:max-w-2xl p-0" onPointerDownOutside={(e) => onOpenChange(false)}>
+        <button
+            onClick={() => onOpenChange(false)}
+            className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none text-foreground z-10"
+        >
+            <X className="h-5 w-5" />
+            <span className="sr-only">Fechar</span>
+        </button>
+        <div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 text-center">
+            <AlertDialogHeader>
+            <AlertDialogTitle className="text-2xl md:text-3xl font-headline font-bold text-center text-primary">
+                ESPERE! Oferta Imperdível!
+            </AlertDialogTitle>
+            <AlertDialogDescription className="text-base md:text-lg text-foreground/80 pt-2">
+                Por apenas <span className="font-bold text-foreground">R$18 a mais</span>, turbine seu aprendizado com o Pacote Premium Completo.
+            </AlertDialogDescription>
+            </AlertDialogHeader>
+            
+            <div className="my-4 p-4 bg-background/50 rounded-xl border border-primary/20">
+                <p className="font-bold text-base md:text-lg text-foreground mt-2">Leve o acesso completo por:</p>
+                 <p className="text-4xl md:text-5xl font-bold my-2 text-primary">R$27,90</p>
+                <p className="font-bold text-base text-foreground mt-4">Receba tudo do Plano Essencial, mais <span className="text-primary">10 Bônus Exclusivos:</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-foreground/80 columns-1 sm:columns-2 text-left">
+                    {premiumBonuses.map((bonus) => (
+                      <li key={bonus} className="flex items-start"><Star className="h-5 w-5 text-secondary mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
+                    ))}
+                  </ul>
+            </div>
+            
+            <AlertDialogFooter className="flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto">
+            <Button asChild size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
+                <Link href={premiumCheckoutUrl}>SIM, QUERO A OFERTA!</Link>
+            </Button>
+            <Button asChild variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
+                <Link href={essentialCheckoutUrl}>Não, obrigado. Quero apenas o plano de R$9,99</Link>
+            </Button>
+            </AlertDialogFooter>
+        </div>
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+}
+
+
 export default function SalesPage() {
   const [isOrderBumpOpen, setOrderBumpOpen] = useState(false);
 
@@ -85,12 +152,7 @@ export default function SalesPage() {
       />
       {/* Urgency Banner */}
       <div className="bg-primary text-primary-foreground text-center p-2 text-sm font-bold overflow-hidden">
-        <div className="animate-marquee whitespace-nowrap">
-          <span className="mx-4">Acesso promocional por tempo limitado</span>
-          <span className="mx-4">Acesso promocional por tempo limitado</span>
-          <span className="mx-4">Acesso promocional por tempo limitado</span>
-          <span className="mx-4">Acesso promocional por tempo limitado</span>
-          <span className="mx-4">Acesso promocional por tempo limitado</span>
+        <div className="whitespace-nowrap">
           <span className="mx-4">Acesso promocional por tempo limitado</span>
         </div>
       </div>
@@ -100,14 +162,8 @@ export default function SalesPage() {
         {/* Hero Section */}
         <section id="inicio" className="text-center py-16 px-4 flex flex-col items-center">
           <AnimateOnScroll>
-            <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight">
-              Gênesis a Apocalipse,{' '}
-              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
-                Entenda a Bíblia de
-              </span>{' '}
-              <span className="bg-gradient-to-r from-yellow-300 to-yellow-500 text-transparent bg-clip-text">
-                Versículo por Versículo
-              </span>
+            <h1 className="font-sans text-4xl md:text-6xl font-bold max-w-3xl mx-auto leading-tight text-primary">
+                Entenda a Bíblia de Gênesis a Apocalipse, Versículo por Versículo
             </h1>
             <p className="mt-4 text-lg md:text-xl text-foreground/80 max-w-2xl mx-auto">
                 O guia definitivo para você destravar seu aprendizado bíblico de forma simples e visual.
@@ -123,9 +179,9 @@ export default function SalesPage() {
             </div>
             <div className="mt-8 text-center">
                 <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
-                <p className="text-5xl font-bold my-2 text-cta">R$9,99</p>
+                <p className="text-5xl font-bold my-2 text-primary">R$9,99</p>
             </div>
-            <Button onClick={handleScrollToOffer} size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
+            <Button onClick={handleScrollToOffer} size="lg" className="mt-6 w-full max-w-md font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
                 DESTRAVAR MEU APRENDIZADO
             </Button>
             <p className="text-xs text-foreground/60 mt-4">
@@ -168,10 +224,10 @@ export default function SalesPage() {
                   <div className="text-left">
                       <h2 className="font-headline text-3xl md:text-4xl font-bold">O que você recebe ao garantir seu acesso?</h2>
                       <ul className="mt-6 space-y-4 text-lg text-foreground/80">
-                          <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais e comentados de todos os 66 livros da Bíblia.</span></li>
-                          <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo para total clareza.</span></li>
-                          <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais, resumos e devocionais para aprofundar seu conhecimento.</span></li>
-                          <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações futuras sem custo adicional.</span></li>
+                          <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais e comentados de todos os 66 livros da Bíblia.</span></li>
+                          <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo para total clareza.</span></li>
+                          <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais, resumos e devocionais para aprofundar seu conhecimento.</span></li>
+                          <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações futuras sem custo adicional.</span></li>
                       </ul>
                   </div>
                   <div>
@@ -223,15 +279,15 @@ export default function SalesPage() {
                 <p className="text-foreground/80 mt-2">O guia completo para seu estudo.</p>
                 <div className="mt-8 text-center bg-background/50 rounded-lg p-6 flex-grow flex flex-col justify-center">
                   <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
-                  <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
+                  <p className="text-6xl font-bold my-2 text-primary">R$9,99</p>
                 </div>
                 <ul className="mt-6 space-y-4 text-lg text-foreground/80 text-left">
-                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais dos 66 livros</span></li>
-                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo</span></li>
-                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais e resumos</span></li>
-                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais dos 66 livros</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais e resumos</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-primary mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações</span></li>
                 </ul>
-                <Button onClick={() => setOrderBumpOpen(true)} size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta/80 hover:bg-cta/70 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+                <Button onClick={() => setOrderBumpOpen(true)} size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-primary/80 hover:bg-primary/70 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
                     QUERO O PLANO ESSENCIAL
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
@@ -240,26 +296,26 @@ export default function SalesPage() {
               </div>
 
               {/* Plano Premium */}
-              <div className="w-full bg-card p-8 rounded-2xl border-2 border-cta shadow-2xl shadow-cta/20 flex flex-col h-full relative">
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-cta text-cta-foreground px-4 py-1 rounded-full text-sm font-bold">
+              <div className="w-full bg-card p-8 rounded-2xl border-2 border-primary shadow-2xl shadow-primary/20 flex flex-col h-full relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-bold">
                     MAIS POPULAR
                 </div>
-                <h3 className="font-headline text-2xl font-bold text-cta">Plano Premium + Bônus</h3>
+                <h3 className="font-headline text-2xl font-bold text-primary">Plano Premium + Bônus</h3>
                 <p className="text-foreground/80 mt-2">Tudo do essencial e muito mais para acelerar seu aprendizado.</p>
                 <div className="mt-8 text-center bg-background/50 rounded-lg p-6 flex-grow flex flex-col justify-center">
                   <p className="text-foreground/80">De <span className="line-through">R$197,00</span> por apenas:</p>
-                  <p className="text-6xl font-bold my-2 text-cta">R$27,90</p>
+                  <p className="text-6xl font-bold my-2 text-primary">R$27,90</p>
                 </div>
                 <div className="mt-6 text-left">
-                  <p className="font-bold text-lg text-foreground">Tudo do Plano Essencial, mais <span className="text-cta">10 Bônus Exclusivos:</span></p>
+                  <p className="font-bold text-lg text-foreground">Tudo do Plano Essencial, mais <span className="text-primary">10 Bônus Exclusivos:</span></p>
                   <ul className="mt-4 space-y-2 text-md text-foreground/80 columns-1 sm:columns-2">
                     {premiumBonuses.map((bonus) => (
-                      <li key={bonus} className="flex items-start"><Star className="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
+                      <li key={bonus} className="flex items-start"><Star className="h-5 w-5 text-secondary mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
                     ))}
                   </ul>
                 </div>
-                <Button asChild size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
-                    <Link href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4">QUERO O PACOTE COMPLETO</Link>
+                <Button asChild size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
+                    <Link href="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV">QUERO O PACOTE COMPLETO</Link>
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
@@ -318,7 +374,7 @@ export default function SalesPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-background border-t border-white/10 text-center py-8 px-4">
+      <footer className="bg-background border-t border-black/10 text-center py-8 px-4">
         <p className="text-sm text-foreground/70">Bíblia Comentada &copy; {new Date().getFullYear()}. Todos os direitos reservados.</p>
         <div className="flex justify-center gap-4 mt-4 text-sm">
           <Link href="#" className="hover:text-primary">Termos de Uso</Link>

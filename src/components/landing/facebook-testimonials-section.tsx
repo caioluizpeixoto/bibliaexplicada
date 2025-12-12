@@ -77,7 +77,7 @@ export function FacebookTestimonialsSection() {
               return (
                 <CarouselItem key={testimonial.id} className="pl-4 sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <Card className="bg-card text-card-foreground shadow-lg rounded-lg overflow-hidden h-full flex flex-col">
+                    <Card className="bg-card text-card-foreground shadow-lg rounded-lg overflow-hidden h-full flex flex-col border-none">
                       {/* Post Header */}
                       <div className="p-4 flex items-center justify-between">
                         <div className="flex items-center space-x-3">
@@ -115,13 +115,13 @@ export function FacebookTestimonialsSection() {
                         </div>
 
                         <div className="flex border-t border-border/20 text-muted-foreground font-medium text-sm">
-                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent transition-colors">
+                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors">
                             <ThumbsUp className="h-4 w-4" /> Curtir
                           </button>
-                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent transition-colors">
+                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors">
                             <MessageCircle className="h-4 w-4" /> Comentar
                           </button>
-                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent transition-colors">
+                          <button className="flex-1 p-2 flex items-center justify-center gap-2 hover:bg-accent hover:text-accent-foreground transition-colors">
                             <Share2 className="h-4 w-4" /> Compartilhar
                           </button>
                         </div>
