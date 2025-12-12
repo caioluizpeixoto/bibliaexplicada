@@ -84,7 +84,7 @@ export default function SalesPage() {
         onOpenChange={setOrderBumpOpen}
         premiumBonuses={premiumBonuses}
         essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH"
-        premiumCheckoutUrl="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH"
+        premiumCheckoutUrl="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV"
       />
       {/* Urgency Banner */}
       <div className="bg-primary text-primary-foreground text-center p-2 text-sm font-bold overflow-hidden">
@@ -264,7 +264,7 @@ export default function SalesPage() {
                   </ul>
                 </div>
                 <Button asChild size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
-                    <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">QUERO O PACOTE COMPLETO</Link>
+                    <Link href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4">QUERO O PACOTE COMPLETO</Link>
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
