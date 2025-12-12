@@ -1,7 +1,6 @@
 
 'use client';
 
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import {
   Accordion,
@@ -109,12 +108,16 @@ function OrderBumpDialog({
             </div>
             
             <div className="flex flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto mt-6">
-              <Button asChild size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
-                  <Link href={premiumCheckoutUrl}>SIM, QUERO A OFERTA!</Link>
-              </Button>
-              <Button asChild variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
-                  <Link href={essentialCheckoutUrl}>Não, obrigado. Quero apenas o plano de R$9,99</Link>
-              </Button>
+               <a href={premiumCheckoutUrl} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
+                      SIM, QUERO A OFERTA!
+                  </Button>
+               </a>
+               <a href={essentialCheckoutUrl} target="_blank" rel="noopener noreferrer">
+                  <Button variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
+                      Não, obrigado. Quero apenas o plano de R$9,99
+                  </Button>
+               </a>
             </div>
         </div>
       </DialogContent>
@@ -308,9 +311,11 @@ export default function SalesPage() {
                     ))}
                   </ul>
                 </div>
-                <Button asChild size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
-                    <Link href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4">QUERO O PACOTE COMPLETO</Link>
-                </Button>
+                <a href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4" target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
+                      QUERO O PACOTE COMPLETO
+                  </Button>
+                </a>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
               </p>              </div>
@@ -370,19 +375,11 @@ export default function SalesPage() {
       <footer className="bg-background border-t border-black/10 text-center py-8 px-4">
         <p className="text-sm text-foreground/70">Bíblia Comentada &copy; {new Date().getFullYear()}. Todos os direitos reservados.</p>
         <div className="flex justify-center gap-4 mt-4 text-sm">
-          <Link href="#" className="hover:text-primary">Termos de Uso</Link>
-          <Link href="#" className="hover:text-primary">Política de Privacidade</Link>
-          <Link href="#" className="hover:text-primary">Contato</Link>
+          <a href="#" className="hover:text-primary">Termos de Uso</a>
+          <a href="#" className="hover:text-primary">Política de Privacidade</a>
+          <a href="#" className="hover:text-primary">Contato</a>
         </div>
       </footer>
     </div>
   );
 }
-
-    
-
-    
-
-    
-
-    
