@@ -2,7 +2,6 @@
 'use client';
 
 import Link from 'next/link';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Button } from '@/components/ui/button';
 import {
   Accordion,
@@ -65,8 +64,6 @@ const premiumBonuses = [
 
 export default function SalesPage() {
   const [isOrderBumpOpen, setOrderBumpOpen] = useState(false);
-  const mockupImage = PlaceHolderImages.find(p => p.id === 'product-mockup');
-  const previewImage = PlaceHolderImages.find(p => p.id === 'content-preview-2');
 
   const handleScrollToOffer = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
@@ -178,16 +175,14 @@ export default function SalesPage() {
                       </ul>
                   </div>
                   <div>
-                    {previewImage && (
-                        <img
-                            src={previewImage.imageUrl}
-                            alt={previewImage.description}
-                            width={600}
-                            height={450}
-                            className="rounded-2xl shadow-2xl shadow-primary/10 border-2 border-primary/30"
-                            data-ai-hint={previewImage.imageHint}
-                        />
-                    )}
+                    <img
+                        src="https://i.postimg.cc/zG8mFNWS/Gemini-Generated-Image-ej4h5ej4h5ej4h5e.png"
+                        alt="Preview do conteúdo"
+                        width={600}
+                        height={450}
+                        className="rounded-2xl shadow-2xl shadow-primary/10 border-2 border-primary/30"
+                        data-ai-hint="bible study"
+                    />
                   </div>
               </div>
           </section>
