@@ -13,6 +13,8 @@ import {
 import { ShieldCheck, Zap, BookLock, Check, Star } from 'lucide-react';
 import { FacebookTestimonialsSection } from '@/components/landing/facebook-testimonials-section';
 import { AnimateOnScroll } from '@/components/landing/animate-on-scroll';
+import { useState } from 'react';
+import { OrderBumpDialog } from '@/components/landing/order-bump-dialog';
 
 const identificationItems = [
     { text: 'Deseja entender capítulos e versículos com profundidade, sem se sentir perdido.' },
@@ -62,6 +64,7 @@ const premiumBonuses = [
 ];
 
 export default function SalesPage() {
+  const [isOrderBumpOpen, setOrderBumpOpen] = useState(false);
   const mockupImage = PlaceHolderImages.find(p => p.id === 'product-mockup');
   const previewImage = PlaceHolderImages.find(p => p.id === 'content-preview-2');
 
@@ -76,6 +79,13 @@ export default function SalesPage() {
 
   return (
     <div className="flex flex-col min-h-[100dvh] bg-background text-foreground">
+      <OrderBumpDialog
+        isOpen={isOrderBumpOpen}
+        onOpenChange={setOrderBumpOpen}
+        premiumBonuses={premiumBonuses}
+        essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH"
+        premiumCheckoutUrl="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH"
+      />
       {/* Urgency Banner */}
       <div className="bg-primary text-primary-foreground text-center p-2 text-sm font-bold overflow-hidden">
         <div className="animate-marquee whitespace-nowrap">
@@ -226,8 +236,8 @@ export default function SalesPage() {
                   <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais e resumos</span></li>
                   <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações</span></li>
                 </ul>
-                <Button asChild size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta/80 hover:bg-cta/70 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
-                    <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">QUERO O PLANO ESSENCIAL</Link>
+                <Button onClick={() => setOrderBumpOpen(true)} size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta/80 hover:bg-cta/70 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+                    QUERO O PLANO ESSENCIAL
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
