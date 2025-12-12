@@ -315,7 +315,7 @@ export default function SalesPage() {
                   </ul>
                 </div>
                 <Button asChild size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
-                    <Link href="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV">QUERO O PACOTE COMPLETO</Link>
+                    <Link href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4">QUERO O PACOTE COMPLETO</Link>
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
@@ -385,3 +385,5 @@ export default function SalesPage() {
     </div>
   );
 }
+
+    
