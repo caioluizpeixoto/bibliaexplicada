@@ -85,7 +85,7 @@ function OrderBumpDialog({
 }) {
   return (
     <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="bg-card border-secondary max-w-lg md:max-w-2xl p-0" onPointerDownOutside={(e) => onOpenChange(false)}>
+      <AlertDialogContent className="bg-card border-secondary max-w-lg md:max-w-2xl p-0" onPointerDownOutside={() => onOpenChange(false)}>
         <button
             onClick={() => onOpenChange(false)}
             className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none text-foreground z-10"
@@ -385,5 +385,7 @@ export default function SalesPage() {
     </div>
   );
 }
+
+    
 
     
