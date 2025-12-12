@@ -10,7 +10,7 @@ import {
   AlertDialogFooter,
 } from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
-import { Star } from 'lucide-react';
+import { Check } from 'lucide-react';
 import Link from 'next/link';
 
 interface OrderBumpDialogProps {
@@ -30,25 +30,25 @@ export function OrderBumpDialog({
 }: OrderBumpDialogProps) {
   return (
     <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="bg-card border-cta max-w-lg md:max-w-2xl p-0">
+      <AlertDialogContent className="bg-card border-cta max-w-lg md:max-w-2xl p-0" onPointerDownOutside={(e) => onOpenChange(false)}>
         <div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 text-center">
             <AlertDialogHeader>
             <AlertDialogTitle className="text-2xl md:text-3xl font-headline font-bold text-center text-cta">
                 ESPERE! Oferta Imperdível!
             </AlertDialogTitle>
             <AlertDialogDescription className="text-base md:text-lg text-foreground/80 pt-2">
-                Por apenas <span className="font-bold text-foreground">R$18 a mais</span>, adicione o Pacote Premium Completo ao seu pedido e acelere seu aprendizado.
+                Por apenas <span className="font-bold text-foreground">R$8 a mais</span>, turbine seu aprendizado com o Pacote Premium Completo.
             </AlertDialogDescription>
             </AlertDialogHeader>
             
             <div className="my-4 p-4 bg-background/50 rounded-xl border border-primary/20">
-                <p className="text-foreground/80">De <span className="line-through">R$197,00</span> por apenas:</p>
-                <p className="text-4xl md:text-5xl font-bold my-2 text-cta">R$17,90</p>
-                <p className="font-bold text-base md:text-lg text-foreground mt-4">Você recebe tudo do Plano Essencial, mais <span className="text-cta">10 Bônus Exclusivos:</span></p>
-                <ul className="mt-4 space-y-1 text-xs md:text-sm text-foreground/80 columns-1 sm:columns-2 text-left">
-                    {premiumBonuses.map((bonus) => (
-                        <li key={bonus} className="flex items-start"><Star className="h-4 w-4 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
-                    ))}
+                <p className="font-bold text-base md:text-lg text-foreground mt-2">Leve o acesso completo por:</p>
+                 <p className="text-4xl md:text-5xl font-bold my-2 text-cta">R$17,90</p>
+                <p className="font-bold text-base text-foreground mt-4">Receba tudo do Plano Essencial, mais:</p>
+                 <ul className="mt-4 space-y-3 text-sm text-foreground/80 text-left">
+                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>+10 Bônus Exclusivos de estudo</span></li>
+                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>+1000 Esboços de Pregação</span></li>
+                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>Bíblia de Estudo Digital Completa</span></li>
                 </ul>
             </div>
             
