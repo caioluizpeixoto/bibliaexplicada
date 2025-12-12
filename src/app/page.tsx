@@ -10,7 +10,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import { ShieldCheck, Zap, BookLock, Check } from 'lucide-react';
+import { ShieldCheck, Zap, BookLock, Check, Star } from 'lucide-react';
 import { FacebookTestimonialsSection } from '@/components/landing/facebook-testimonials-section';
 import { AnimateOnScroll } from '@/components/landing/animate-on-scroll';
 
@@ -47,6 +47,19 @@ const faqs = [
   },
 ];
 
+
+const premiumBonuses = [
+  '7 Selos do Apocalipse',
+  '31 Provérbios Explicados',
+  '100 Versículos Antigo Testamento',
+  '100 Versículos Novo Testamento',
+  '150 Salmos Explicados',
+  '200 Versículos Mais Reveladores',
+  '1000 Esboços de Pregação',
+  'Bíblia de Estudo Digital',
+  'Devocional de 40 Dias',
+  'Evangelho de Mateus Explicado',
+];
 
 export default function SalesPage() {
   const mockupImage = PlaceHolderImages.find(p => p.id === 'product-mockup');
@@ -192,30 +205,62 @@ export default function SalesPage() {
           </section>
         </AnimateOnScroll>
 
-        {/* Final CTA */}
+        {/* Final CTA Section */}
         <AnimateOnScroll>
           <section id="oferta-final" className="bg-background py-20 px-4 text-center">
-              <p className="font-semibold text-primary">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
-              <h2 className="font-headline text-3xl md:text-5xl font-bold mt-4 max-w-3xl mx-auto">Destrave o seu entendimento da Bíblia hoje mesmo</h2>
-              <div className="mt-8 max-w-xl mx-auto bg-card p-8 rounded-2xl border border-primary/20">
-                  <h3 className="font-headline text-2xl font-bold text-primary">Ao garantir seu acesso, você recebe:</h3>
-                  <ul className="mt-6 space-y-4 text-lg text-foreground/80 text-left">
-                      <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais e comentados de todos os 66 livros da Bíblia.</span></li>
-                      <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo para total clareza.</span></li>
-                      <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais, resumos e devocionais para aprofundar seu conhecimento.</span></li>
-                      <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações futuras sem custo adicional.</span></li>
-                  </ul>
-                  <div className="mt-8 text-center bg-background/50 rounded-lg p-6">
-                      <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
-                      <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
-                  </div>
-              </div>
-               <Button asChild size="lg" className="mt-8 w-full max-w-md font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
-                  <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">DESTRAVAR MEU APRENDIZADO</Link>
-              </Button>
-              <p className="text-xs text-foreground/60 mt-4">
+            <p className="font-semibold text-primary">OFERTA ESPECIAL POR TEMPO LIMITADO</p>
+            <h2 className="font-headline text-3xl md:text-5xl font-bold mt-4 max-w-3xl mx-auto">Destrave o seu entendimento da Bíblia hoje mesmo</h2>
+            
+            <div className="mt-12 mx-auto grid max-w-6xl grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+              {/* Plano Básico */}
+              <div className="w-full bg-card p-8 rounded-2xl border border-primary/20 flex flex-col h-full">
+                <h3 className="font-headline text-2xl font-bold text-primary">Plano Essencial</h3>
+                <p className="text-foreground/80 mt-2">O guia completo para seu estudo.</p>
+                <div className="mt-8 text-center bg-background/50 rounded-lg p-6 flex-grow flex flex-col justify-center">
+                  <p className="text-foreground/80">De <span className="line-through">R$57,00</span> por apenas:</p>
+                  <p className="text-6xl font-bold my-2 text-cta">R$9,99</p>
+                </div>
+                <ul className="mt-6 space-y-4 text-lg text-foreground/80 text-left">
+                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Estudos visuais dos 66 livros</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Explicações versículo por versículo</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Mapas mentais e resumos</span></li>
+                  <li className="flex items-start"><Check className="h-6 w-6 text-cta mr-3 mt-1 flex-shrink-0" /><span>Acesso vitalício e atualizações</span></li>
+                </ul>
+                <Button asChild size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta/80 hover:bg-cta/70 text-cta-foreground rounded-xl shadow-lg shadow-cta/20">
+                    <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">QUERO O PLANO ESSENCIAL</Link>
+                </Button>
+                 <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
               </p>
+              </div>
+
+              {/* Plano Premium */}
+              <div className="w-full bg-card p-8 rounded-2xl border-2 border-cta shadow-2xl shadow-cta/20 flex flex-col h-full relative">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-cta text-cta-foreground px-4 py-1 rounded-full text-sm font-bold">
+                    MAIS POPULAR
+                </div>
+                <h3 className="font-headline text-2xl font-bold text-cta">Plano Premium + Bônus</h3>
+                <p className="text-foreground/80 mt-2">Tudo do essencial e muito mais para acelerar seu aprendizado.</p>
+                <div className="mt-8 text-center bg-background/50 rounded-lg p-6 flex-grow flex flex-col justify-center">
+                  <p className="text-foreground/80">De <span className="line-through">R$197,00</span> por apenas:</p>
+                  <p className="text-6xl font-bold my-2 text-cta">R$17,90</p>
+                </div>
+                <div className="mt-6 text-left">
+                  <p className="font-bold text-lg text-foreground">Tudo do Plano Essencial, mais <span className="text-cta">10 Bônus Exclusivos:</span></p>
+                  <ul className="mt-4 space-y-2 text-md text-foreground/80 columns-1 sm:columns-2">
+                    {premiumBonuses.map((bonus) => (
+                      <li key={bonus} className="flex items-start"><Star className="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
+                    ))}
+                  </ul>
+                </div>
+                <Button asChild size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
+                    <Link href="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH">QUERO O PACOTE COMPLETO</Link>
+                </Button>
+                 <p className="text-xs text-foreground/60 mt-4">
+                  Garantia de 7 dias • Acesso vitalício e imediato
+              </p>
+              </div>
+            </div>
           </section>
         </AnimateOnScroll>
 
