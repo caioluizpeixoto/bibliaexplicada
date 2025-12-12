@@ -14,12 +14,9 @@ import { FacebookTestimonialsSection } from '@/components/landing/facebook-testi
 import { AnimateOnScroll } from '@/components/landing/animate-on-scroll';
 import { useState } from 'react';
 import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogDescription,
-} from '@/components/ui/alert-dialog';
+  Dialog,
+  DialogContent,
+} from '@/components/ui/dialog';
 
 
 const identificationItems = [
@@ -83,8 +80,8 @@ function OrderBumpDialog({
   premiumCheckoutUrl: string;
 }) {
   return (
-    <AlertDialog open={isOpen} onOpenChange={onOpenChange}>
-      <AlertDialogContent className="bg-card border-secondary max-w-lg md:max-w-2xl p-0">
+    <Dialog open={isOpen} onOpenChange={onOpenChange}>
+      <DialogContent className="bg-card border-secondary max-w-lg md:max-w-2xl p-0">
         <button
             onClick={() => onOpenChange(false)}
             className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none text-foreground z-10"
@@ -93,14 +90,12 @@ function OrderBumpDialog({
             <span className="sr-only">Fechar</span>
         </button>
         <div className="max-h-[90vh] overflow-y-auto p-4 sm:p-6 text-center">
-            <AlertDialogHeader>
-            <AlertDialogTitle className="text-2xl md:text-3xl font-headline font-bold text-center text-primary">
+            <div className="text-2xl md:text-3xl font-headline font-bold text-center text-primary">
                 ESPERE! Oferta Imperdível!
-            </AlertDialogTitle>
-            <AlertDialogDescription className="text-base md:text-lg text-foreground/80 pt-2">
+            </div>
+            <p className="text-base md:text-lg text-foreground/80 pt-2">
                 Por apenas <span className="font-bold text-foreground">R$18 a mais</span>, turbine seu aprendizado com o Pacote Premium Completo.
-            </AlertDialogDescription>
-            </AlertDialogHeader>
+            </p>
             
             <div className="my-4 p-4 bg-background/50 rounded-xl border border-primary/20">
                 <p className="font-bold text-base md:text-lg text-foreground mt-2">Leve o acesso completo por:</p>
@@ -122,8 +117,8 @@ function OrderBumpDialog({
               </Button>
             </div>
         </div>
-      </AlertDialogContent>
-    </AlertDialog>
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -383,6 +378,8 @@ export default function SalesPage() {
     </div>
   );
 }
+
+    
 
     
 
