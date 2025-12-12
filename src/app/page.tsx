@@ -114,14 +114,14 @@ function OrderBumpDialog({
                   </ul>
             </div>
             
-            <AlertDialogFooter className="flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto">
-            <Button asChild size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
-                <Link href={premiumCheckoutUrl}>SIM, QUERO A OFERTA!</Link>
-            </Button>
-            <Button asChild variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
-                <Link href={essentialCheckoutUrl}>Não, obrigado. Quero apenas o plano de R$9,99</Link>
-            </Button>
-            </AlertDialogFooter>
+            <div className="flex flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto mt-6">
+              <Button asChild size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl shadow-lg shadow-primary/20">
+                  <Link href={premiumCheckoutUrl}>SIM, QUERO A OFERTA!</Link>
+              </Button>
+              <Button asChild variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
+                  <Link href={essentialCheckoutUrl}>Não, obrigado. Quero apenas o plano de R$9,99</Link>
+              </Button>
+            </div>
         </div>
       </AlertDialogContent>
     </AlertDialog>
@@ -319,8 +319,7 @@ export default function SalesPage() {
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
                   Garantia de 7 dias • Acesso vitalício e imediato
-              </p>
-              </div>
+              </p>              </div>
             </div>
           </section>
         </AnimateOnScroll>
