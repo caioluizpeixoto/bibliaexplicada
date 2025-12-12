@@ -253,7 +253,7 @@ export default function SalesPage() {
                 <p className="text-foreground/80 mt-2">Tudo do essencial e muito mais para acelerar seu aprendizado.</p>
                 <div className="mt-8 text-center bg-background/50 rounded-lg p-6 flex-grow flex flex-col justify-center">
                   <p className="text-foreground/80">De <span className="line-through">R$197,00</span> por apenas:</p>
-                  <p className="text-6xl font-bold my-2 text-cta">R$17,90</p>
+                  <p className="text-6xl font-bold my-2 text-cta">R$27,90</p>
                 </div>
                 <div className="mt-6 text-left">
                   <p className="font-bold text-lg text-foreground">Tudo do Plano Essencial, mais <span className="text-cta">10 Bônus Exclusivos:</span></p>
