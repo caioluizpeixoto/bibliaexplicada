@@ -62,7 +62,7 @@ export function OrderBumpDialog({
             
             <AlertDialogFooter className="flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto">
             <Button asChild size="lg" className="w-full font-bold text-lg md:text-xl h-auto py-3 md:py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
-                <Link href={premiumCheckoutUrl}>SIM, QUERO A OFERTA!</Link>
+                <Link href="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV">SIM, QUERO A OFERTA!</Link>
             </Button>
             <Button asChild variant="link" size="sm" className="text-foreground/60 hover:text-foreground/80 h-auto">
                 <Link href={essentialCheckoutUrl}>Não, obrigado. Quero apenas o plano de R$9,99</Link>
