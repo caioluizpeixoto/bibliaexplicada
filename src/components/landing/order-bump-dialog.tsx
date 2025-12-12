@@ -10,7 +10,7 @@ import {
   AlertDialogFooter,
 } from '@/components/ui/alert-dialog';
 import { Button } from '@/components/ui/button';
-import { Check } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Link from 'next/link';
 
 interface OrderBumpDialogProps {
@@ -44,12 +44,12 @@ export function OrderBumpDialog({
             <div className="my-4 p-4 bg-background/50 rounded-xl border border-primary/20">
                 <p className="font-bold text-base md:text-lg text-foreground mt-2">Leve o acesso completo por:</p>
                  <p className="text-4xl md:text-5xl font-bold my-2 text-cta">R$17,90</p>
-                <p className="font-bold text-base text-foreground mt-4">Receba tudo do Plano Essencial, mais:</p>
-                 <ul className="mt-4 space-y-3 text-sm text-foreground/80 text-left">
-                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>+10 Bônus Exclusivos de estudo</span></li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>+1000 Esboços de Pregação</span></li>
-                    <li className="flex items-center"><Check className="h-5 w-5 text-cta mr-3 flex-shrink-0" /><span>Bíblia de Estudo Digital Completa</span></li>
-                </ul>
+                <p className="font-bold text-base text-foreground mt-4">Receba tudo do Plano Essencial, mais <span className="text-cta">10 Bônus Exclusivos:</span></p>
+                  <ul className="mt-4 space-y-2 text-sm text-foreground/80 columns-1 text-left">
+                    {premiumBonuses.map((bonus) => (
+                      <li key={bonus} className="flex items-start"><Star className="h-5 w-5 text-yellow-400 mr-2 mt-0.5 flex-shrink-0" /><span>{bonus}</span></li>
+                    ))}
+                  </ul>
             </div>
             
             <AlertDialogFooter className="flex-col sm:flex-col sm:space-x-0 gap-3 w-full max-w-md mx-auto">
