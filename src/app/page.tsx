@@ -105,7 +105,7 @@ function OrderBumpDialog({
             
             <div className="my-4 p-4 bg-background/50 rounded-xl border border-primary/20">
                 <p className="font-bold text-base md:text-lg text-foreground mt-2">Leve o acesso completo por:</p>
-                 <p className="text-4xl md:text-5xl font-bold my-2 text-primary">R$27,90</p>
+                 <p className="text-4xl md:text-5xl font-bold my-2 text-primary">R$17,90</p>
                 <p className="font-bold text-base text-foreground mt-4">Receba tudo do Plano Essencial, mais <span className="text-primary">10 Bônus Exclusivos:</span></p>
                   <ul className="mt-4 space-y-2 text-sm text-foreground/80 columns-1 sm:columns-2 text-left">
                     {premiumBonuses.map((bonus) => (
@@ -147,7 +147,7 @@ export default function SalesPage() {
         isOpen={isOrderBumpOpen}
         onOpenChange={setOrderBumpOpen}
         premiumBonuses={premiumBonuses}
-        essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4"
+        essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/h05QRV3Dy682cdu1Xc4S"
         premiumCheckoutUrl="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV"
       />
       {/* Urgency Banner */}
