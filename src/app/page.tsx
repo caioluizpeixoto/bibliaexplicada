@@ -83,7 +83,7 @@ export default function SalesPage() {
         isOpen={isOrderBumpOpen}
         onOpenChange={setOrderBumpOpen}
         premiumBonuses={premiumBonuses}
-        essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/MJBjBouqDlm54NJ0cveH"
+        essentialCheckoutUrl="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4"
         premiumCheckoutUrl="https://www.ggcheckout.com/checkout/v2/4lY7wAiO9bouIDQ3k4EV"
       />
       {/* Urgency Banner */}
@@ -263,7 +263,7 @@ export default function SalesPage() {
                     ))}
                   </ul>
                 </div>
-                <Button asChild size="lg" className="mt-8 w-full font-bold text-xl h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
+                <Button asChild size="lg" className="mt-8 w-full font-bold text-lg h-auto py-4 px-6 bg-cta hover:bg-cta/90 text-cta-foreground rounded-xl shadow-lg shadow-cta/20 animate-pulse-slow">
                     <Link href="https://www.ggcheckout.com/checkout/v2/Eh5AL3mvabfmOh6CsRO4">QUERO O PACOTE COMPLETO</Link>
                 </Button>
                  <p className="text-xs text-foreground/60 mt-4">
